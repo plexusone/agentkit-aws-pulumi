@@ -1,5 +1,11 @@
 # AgentKit for AWS Pulumi
 
+[![Build Status][build-status-svg]][build-status-url]
+[![Lint Status][lint-status-svg]][lint-status-url]
+[![Go Report Card][goreport-svg]][goreport-url]
+[![Docs][docs-godoc-svg]][docs-godoc-url]
+[![License][license-svg]][license-url]
+
 Pulumi components for deploying [agentkit](https://github.com/agentplexus/agentkit)-based agents to AWS Bedrock AgentCore.
 
 ## Scope
@@ -206,3 +212,14 @@ Configuration uses the same schema as [agentkit-aws-cdk](https://github.com/agen
 ## License
 
 MIT
+
+ [build-status-svg]: https://github.com/agentplexus/agentkit-aws-pulumi/actions/workflows/ci.yaml/badge.svg?branch=main
+ [build-status-url]: https://github.com/agentplexus/agentkit-aws-pulumi/actions/workflows/ci.yaml
+ [lint-status-svg]: https://github.com/agentplexus/agentkit-aws-pulumi/actions/workflows/lint.yaml/badge.svg?branch=main
+ [lint-status-url]: https://github.com/agentplexus/agentkit-aws-pulumi/actions/workflows/lint.yaml
+ [goreport-svg]: https://goreportcard.com/badge/github.com/agentplexus/agentkit-aws-pulumi
+ [goreport-url]: https://goreportcard.com/report/github.com/agentplexus/agentkit-aws-pulumi
+ [docs-godoc-svg]: https://pkg.go.dev/badge/github.com/agentplexus/agentkit-aws-pulumi
+ [docs-godoc-url]: https://pkg.go.dev/github.com/agentplexus/agentkit-aws-pulumi
+ [license-svg]: https://img.shields.io/badge/license-MIT-blue.svg
+ [license-url]: https://github.com/agentplexus/agentkit-aws-pulumi/blob/master/LICENSE
