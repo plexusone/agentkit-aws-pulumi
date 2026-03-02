@@ -2,7 +2,7 @@
 package agentcore
 
 import (
-	"github.com/agentplexus/agentkit/platforms/agentcore/iac"
+	"github.com/plexusone/agentkit/platforms/agentcore/iac"
 )
 
 // Re-export config types from agentkit for convenience.

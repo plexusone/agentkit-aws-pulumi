@@ -6,7 +6,7 @@
 [![Docs][docs-godoc-svg]][docs-godoc-url]
 [![License][license-svg]][license-url]
 
-Pulumi components for deploying [agentkit](https://github.com/agentplexus/agentkit)-based agents to AWS Bedrock AgentCore.
+Pulumi components for deploying [agentkit](https://github.com/plexusone/agentkit)-based agents to AWS Bedrock AgentCore.
 
 ## Scope
 
@@ -14,10 +14,10 @@ This module provides **Pulumi** components for AWS. For other IaC tools:
 
 | IaC Tool | Module | Dependencies |
 |----------|--------|--------------|
-| **AWS CDK** | [agentkit-aws-cdk](https://github.com/agentplexus/agentkit-aws-cdk) | 21 |
+| **AWS CDK** | [agentkit-aws-cdk](https://github.com/plexusone/agentkit-aws-cdk) | 21 |
 | **Pulumi** | `agentkit-aws-pulumi` (this module) | 340 |
-| **Terraform** | [agentkit-terraform](https://github.com/agentplexus/agentkit-terraform) | 0 (HCL only) |
-| **CloudFormation** | [agentkit](https://github.com/agentplexus/agentkit) (core) | 0 extra |
+| **Terraform** | [agentkit-terraform](https://github.com/plexusone/agentkit-terraform) | 0 (HCL only) |
+| **CloudFormation** | [agentkit](https://github.com/plexusone/agentkit) (core) | 0 extra |
 
 All modules share the same YAML/JSON configuration schema from `agentkit/platforms/agentcore/iac/`.
 
@@ -40,7 +40,7 @@ agentkit-aws-pulumi/                   # Pulumi AWS components (this module)
 ## Installation
 
 ```bash
-go get github.com/agentplexus/agentkit-aws-pulumi
+go get github.com/plexusone/agentkit-aws-pulumi
 ```
 
 ## Two Deployment Approaches
@@ -60,7 +60,7 @@ Type-safe Go code with full IDE support and compile-time validation.
 package main
 
 import (
-	"github.com/agentplexus/agentkit-aws-pulumi/agentcore"
+	"github.com/plexusone/agentkit-aws-pulumi/agentcore"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -108,7 +108,7 @@ Minimal Go wrapper that loads configuration from JSON or YAML files.
 package main
 
 import (
-	"github.com/agentplexus/agentkit-aws-pulumi/agentcore"
+	"github.com/plexusone/agentkit-aws-pulumi/agentcore"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -160,7 +160,7 @@ pulumi up
 
 ## Configuration Reference
 
-Configuration uses the same schema as [agentkit-aws-cdk](https://github.com/agentplexus/agentkit-aws-cdk). See the agentkit-aws-cdk README for full configuration reference.
+Configuration uses the same schema as [agentkit-aws-cdk](https://github.com/plexusone/agentkit-aws-cdk). See the agentkit-aws-cdk README for full configuration reference.
 
 ### Quick Reference
 
@@ -213,13 +213,13 @@ Configuration uses the same schema as [agentkit-aws-cdk](https://github.com/agen
 
 MIT
 
- [build-status-svg]: https://github.com/agentplexus/agentkit-aws-pulumi/actions/workflows/ci.yaml/badge.svg?branch=main
- [build-status-url]: https://github.com/agentplexus/agentkit-aws-pulumi/actions/workflows/ci.yaml
- [lint-status-svg]: https://github.com/agentplexus/agentkit-aws-pulumi/actions/workflows/lint.yaml/badge.svg?branch=main
- [lint-status-url]: https://github.com/agentplexus/agentkit-aws-pulumi/actions/workflows/lint.yaml
- [goreport-svg]: https://goreportcard.com/badge/github.com/agentplexus/agentkit-aws-pulumi
- [goreport-url]: https://goreportcard.com/report/github.com/agentplexus/agentkit-aws-pulumi
- [docs-godoc-svg]: https://pkg.go.dev/badge/github.com/agentplexus/agentkit-aws-pulumi
- [docs-godoc-url]: https://pkg.go.dev/github.com/agentplexus/agentkit-aws-pulumi
+ [build-status-svg]: https://github.com/plexusone/agentkit-aws-pulumi/actions/workflows/ci.yaml/badge.svg?branch=main
+ [build-status-url]: https://github.com/plexusone/agentkit-aws-pulumi/actions/workflows/ci.yaml
+ [lint-status-svg]: https://github.com/plexusone/agentkit-aws-pulumi/actions/workflows/lint.yaml/badge.svg?branch=main
+ [lint-status-url]: https://github.com/plexusone/agentkit-aws-pulumi/actions/workflows/lint.yaml
+ [goreport-svg]: https://goreportcard.com/badge/github.com/plexusone/agentkit-aws-pulumi
+ [goreport-url]: https://goreportcard.com/report/github.com/plexusone/agentkit-aws-pulumi
+ [docs-godoc-svg]: https://pkg.go.dev/badge/github.com/plexusone/agentkit-aws-pulumi
+ [docs-godoc-url]: https://pkg.go.dev/github.com/plexusone/agentkit-aws-pulumi
  [license-svg]: https://img.shields.io/badge/license-MIT-blue.svg
- [license-url]: https://github.com/agentplexus/agentkit-aws-pulumi/blob/master/LICENSE
+ [license-url]: https://github.com/plexusone/agentkit-aws-pulumi/blob/master/LICENSE

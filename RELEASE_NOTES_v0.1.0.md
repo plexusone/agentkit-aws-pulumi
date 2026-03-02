@@ -19,7 +19,7 @@ Native Go components for AWS Bedrock AgentCore:
 
 ```go
 import (
-    "github.com/agentplexus/agentkit-aws-pulumi/agentcore"
+    "github.com/plexusone/agentkit-aws-pulumi/agentcore"
     "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -92,7 +92,7 @@ observability:
 ## Dependencies
 
 - **340 transitive packages** (native Go Pulumi SDK)
-- Requires `github.com/agentplexus/agentkit` for shared configuration
+- Requires `github.com/plexusone/agentkit` for shared configuration
 - No Node.js runtime required (unlike CDK)
 
 ## Comparison with agentkit-aws-cdk
@@ -109,14 +109,14 @@ observability:
 
 | Module | Purpose |
 |--------|---------|
-| [agentkit](https://github.com/agentplexus/agentkit) | Core library, shared IaC config, pure CloudFormation |
-| [agentkit-aws-cdk](https://github.com/agentplexus/agentkit-aws-cdk) | AWS CDK constructs |
-| [agentkit-terraform](https://github.com/agentplexus/agentkit-terraform) | Terraform modules (planned) |
+| [agentkit](https://github.com/plexusone/agentkit) | Core library, shared IaC config, pure CloudFormation |
+| [agentkit-aws-cdk](https://github.com/plexusone/agentkit-aws-cdk) | AWS CDK constructs |
+| [agentkit-terraform](https://github.com/plexusone/agentkit-terraform) | Terraform modules (planned) |
 
 ## Installation
 
 ```bash
-go get github.com/agentplexus/agentkit-aws-pulumi
+go get github.com/plexusone/agentkit-aws-pulumi
 ```
 
 ## Prerequisites

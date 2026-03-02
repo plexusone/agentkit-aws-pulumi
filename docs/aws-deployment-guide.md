@@ -27,7 +27,7 @@ AWS Bedrock AgentCore runs agents in Firecracker microVMs with automatic scaling
 ### CDK Deployment
 
 ```go
-import "github.com/agentplexus/agentkit-aws/agentcore"
+import "github.com/plexusone/agentkit-aws/agentcore"
 
 func main() {
     app := agentcore.NewApp()
@@ -48,7 +48,7 @@ cdk deploy
 ### Pulumi Deployment
 
 ```go
-import "github.com/agentplexus/agentkit-pulumi-aws/agentcore"
+import "github.com/plexusone/agentkit-pulumi-aws/agentcore"
 
 func main() {
     pulumi.Run(func(ctx *pulumi.Context) error {
@@ -68,7 +68,7 @@ pulumi up
 ### Pure CloudFormation (No CDK/Pulumi)
 
 ```go
-import "github.com/agentplexus/agentkit/platforms/agentcore/iac"
+import "github.com/plexusone/agentkit/platforms/agentcore/iac"
 
 func main() {
     config, _ := iac.LoadStackConfigFromFile("config.yaml")
@@ -227,6 +227,6 @@ Need to deploy agentkit agents to AWS?
 
 ## Related Documentation
 
-- [agentkit-aws README](https://github.com/agentplexus/agentkit-aws)
-- [agentkit-pulumi-aws README](https://github.com/agentplexus/agentkit-pulumi-aws)
+- [agentkit-aws README](https://github.com/plexusone/agentkit-aws)
+- [agentkit-pulumi-aws README](https://github.com/plexusone/agentkit-pulumi-aws)
 - [AWS Bedrock AgentCore Documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/agentcore.html)

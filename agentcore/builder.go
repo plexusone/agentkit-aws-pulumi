@@ -2,7 +2,7 @@
 package agentcore
 
 import (
-	"github.com/agentplexus/agentkit/platforms/agentcore/iac"
+	"github.com/plexusone/agentkit/platforms/agentcore/iac"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 

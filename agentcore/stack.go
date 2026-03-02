@@ -4,7 +4,7 @@ package agentcore
 import (
 	"fmt"
 
-	"github.com/agentplexus/agentkit/platforms/agentcore/iac"
+	"github.com/plexusone/agentkit/platforms/agentcore/iac"
 	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/cloudwatch"
 	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/ec2"
 	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/iam"
