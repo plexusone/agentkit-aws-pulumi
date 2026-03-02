@@ -1,0 +1,64 @@
+{
+  "irVersion": "1.0",
+  "project": "agentkit-aws-pulumi",
+  "repository": "https://github.com/plexusone/agentkit-aws-pulumi",
+  "versioning": "semver",
+  "commitConvention": "conventional",
+  "releases": [
+    {
+      "version": "v0.2.0",
+      "date": "2026-03-02",
+      "highlights": [
+        { "description": "Module path migrated from `github.com/agentplexus` to `github.com/plexusone` organization" },
+        { "description": "CI/CD migrated to shared workflows from `plexusone/.github`" }
+      ],
+      "breaking": [
+        { "description": "Module path changed from `github.com/agentplexus/agentkit-aws-pulumi` to `github.com/plexusone/agentkit-aws-pulumi`", "commit": "8c4e001" }
+      ],
+      "upgradeGuide": [
+        { "description": "Update import paths from `github.com/agentplexus/agentkit-aws-pulumi` to `github.com/plexusone/agentkit-aws-pulumi`" },
+        { "description": "Update go.mod dependency to `github.com/plexusone/agentkit-aws-pulumi`" }
+      ],
+      "changed": [
+        { "description": "Updated dependency to `github.com/plexusone/agentkit` v0.5.0 (migrated from agentplexus org)", "commit": "8c4e001" },
+        { "description": "Docker image references updated from `ghcr.io/agentplexus/` to `ghcr.io/plexusone/`", "commit": "8c4e001" }
+      ],
+      "infrastructure": [
+        { "description": "Migrated to shared CI workflow from `plexusone/.github`", "commit": "2e5f735" },
+        { "description": "Migrated to shared lint workflow from `plexusone/.github`", "commit": "2e5f735" },
+        { "description": "Migrated to shared CodeQL SAST workflow from `plexusone/.github`", "commit": "2e5f735" }
+      ],
+      "documentation": [
+        { "description": "Updated README.md shields to reflect new organization", "commit": "28ff574" }
+      ],
+      "dependencies": [
+        { "description": "Bump `github.com/agentplexus/agentkit` from 0.2.0 to 0.3.0", "commit": "390bf21" },
+        { "description": "Bump `github.com/agentplexus/agentkit` from 0.3.0 to 0.4.0", "commit": "cccb803" },
+        { "description": "Bump `github.com/pulumi/pulumi/sdk/v3` to 3.219.0", "commit": "222c55d" },
+        { "description": "Bump `github.com/pulumi/pulumi/sdk/v3` to 3.224.0", "commit": "45a10e3" }
+      ]
+    },
+    {
+      "version": "v0.1.0",
+      "date": "2025-12-31",
+      "highlights": [
+        { "description": "Initial release of Pulumi components for deploying agentkit-based agents to AWS Bedrock AgentCore" }
+      ],
+      "added": [
+        { "description": "Native Go Pulumi components for AWS Bedrock AgentCore deployment", "commit": "9edbbfe" },
+        { "description": "Fluent builder API (`AgentBuilder`, `StackBuilder`) matching agentkit-aws-cdk patterns", "commit": "9edbbfe" },
+        { "description": "Configuration loading from JSON or YAML files via `NewStackFromFile`", "commit": "9edbbfe" },
+        { "description": "VPC creation with public/private subnets across multiple AZs", "commit": "9edbbfe" },
+        { "description": "NAT Gateway for private subnet internet access", "commit": "9edbbfe" },
+        { "description": "Security Groups for agent network isolation", "commit": "9edbbfe" },
+        { "description": "IAM Roles with Bedrock and Secrets Manager access", "commit": "9edbbfe" },
+        { "description": "CloudWatch Log Groups with configurable retention", "commit": "9edbbfe" },
+        { "description": "Opik observability integration", "commit": "9edbbfe" }
+      ],
+      "documentation": [
+        { "description": "README with shields, installation, and usage examples", "commit": "7d4412e" },
+        { "description": "AWS deployment guide", "commit": "9edbbfe" }
+      ]
+    }
+  ]
+}
