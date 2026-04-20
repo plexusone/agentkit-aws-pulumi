@@ -27,6 +27,7 @@ All modules share the same YAML/JSON configuration schema from `agentkit/platfor
 
 ```
 agentkit/                              # Core library (shared config)
+├── deploy/                            # Deployment provider interface
 ├── platforms/agentcore/iac/
 │   ├── config.go                      # Shared config structs
 │   ├── loader.go                      # JSON/YAML loading
@@ -37,6 +38,9 @@ agentkit-aws-pulumi/                   # Pulumi AWS components (this module)
 │   ├── stack.go                       # Pulumi resources
 │   ├── builder.go                     # Fluent builders
 │   └── loader.go                      # Config re-exports
+├── deploy/
+│   ├── pulumi/stack.go                # Pulumi automation utilities
+│   └── providers/lightsail/           # Lightsail container provider
 ```
 
 ## Installation
@@ -44,6 +48,43 @@ agentkit-aws-pulumi/                   # Pulumi AWS components (this module)
 ```bash
 go get github.com/plexusone/agentkit-aws-pulumi
 ```
+
+## Lightsail Container Deployment
+
+Deploy agents to AWS Lightsail Container Service using the `deploy.Provider` interface:
+
+```go
+import (
+    "github.com/plexusone/agentkit/deploy"
+    _ "github.com/plexusone/agentkit-aws-pulumi/deploy/providers/lightsail"
+)
+
+cfg, _ := deploy.LoadDeployConfig("deploy.yaml")
+provider, _ := deploy.GetProvider(cfg)  // Respects AGENTKIT_DEPLOY_PROVIDER
+defer provider.Close()
+
+status, _ := provider.Deploy(ctx, cfg)
+fmt.Println(status.Outputs["serviceUrl"])
+```
+
+**deploy.yaml:**
+```yaml
+stack:
+  name: my-agent
+  project: my-project
+  region: us-east-1
+  image:
+    repository: myorg/myagent
+    tag: v1.0.0
+  resources:
+    port: 8080
+
+provider: lightsail
+```
+
+See [agentkit deploy documentation](https://github.com/plexusone/agentkit/tree/main/deploy) for full configuration options.
+
+---
 
 ## Two Deployment Approaches
 

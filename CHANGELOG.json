@@ -6,6 +6,22 @@
   "commitConvention": "conventional",
   "releases": [
     {
+      "version": "v0.3.0",
+      "date": "2026-04-20",
+      "highlights": [
+        { "description": "AWS Lightsail Container Service deployment provider" }
+      ],
+      "added": [
+        { "description": "Pulumi automation utilities for stack management (`deploy/pulumi/stack.go`)", "commit": "eebfd2a" },
+        { "description": "AWS Lightsail deployment provider implementing `deploy.Provider` interface (`deploy/providers/lightsail/`)", "commit": "eebfd2a" },
+        { "description": "Lightsail-specific configuration with power levels (nano to xlarge) and scaling (`deploy/providers/lightsail/config.go`)", "commit": "eebfd2a" },
+        { "description": "Auto-registration of Lightsail provider via init() (`deploy/providers/lightsail/init.go`)", "commit": "eebfd2a" }
+      ],
+      "dependencies": [
+        { "description": "Upgraded `github.com/plexusone/agentkit` to v0.6.0 for deploy package support", "commit": "990e235" }
+      ]
+    },
+    {
       "version": "v0.2.0",
       "date": "2026-03-02",
       "highlights": [
