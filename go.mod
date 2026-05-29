@@ -5,7 +5,7 @@ go 1.26.0
 require (
 	github.com/plexusone/agentkit v0.6.0
 	github.com/pulumi/pulumi-aws/sdk/v6 v6.83.3
-	github.com/pulumi/pulumi/sdk/v3 v3.243.0
+	github.com/pulumi/pulumi/sdk/v3 v3.244.0
 )
 
 require (
